@@ -4,7 +4,12 @@ const ICONS_DIR = "build/icons/";
 const windowsOS = {
     win: {
         icon: ICONS_DIR + "icon.ico",
-        target: "nsis",
+        target: [
+            {
+                target: "nsis",
+                arch: ["ia32"],
+            },
+        ],
     },
 
     nsis: {
@@ -28,14 +33,8 @@ module.exports = {
     },
     files: [
         "package.json",
-        {
-            from: "dist/main/",
-            to: "dist/main/",
-        },
-        {
-            from: "dist/renderer",
-            to: "dist/renderer/",
-        },
+        "dist/**/*",
+        "node_modules/**/*",
     ],
     ...windowsOS,
 };

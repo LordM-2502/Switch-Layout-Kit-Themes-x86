@@ -12,6 +12,7 @@
         "build:app": "node .electron-nuxt/build.js",
         "build:icons": "electron-icon-builder --flatten --input=./src/renderer/assets/icons/icon.png --output=./build",
         "build": "yarn run build:icons && yarn run build:app",
+        "build:win-ia32": "yarn run build:icons && yarn run build:app && electron-builder --win --ia32",
         "deploy": "yarn run build --publish always",
         "_preinstall": "node .electron-nuxt/check-engines.js",
         "_postinstall": "electron-builder install-app-deps"
@@ -22,7 +23,9 @@
         "node": ">=14.0"
     },
     "resolutions": {
-        "@types/node": "12.12.6"
+        "@types/node": "12.12.6",
+        "@types/babel__traverse": "7.11.1",
+        "@types/minimatch": "3.0.4"
     },
     "devDependencies": {
         "@fortawesome/fontawesome-free": "5.15.3",
@@ -47,6 +50,7 @@
         "electron": "12.0.7",
         "electron-builder": "^22.11.7",
         "electron-devtools-installer": "3.1.1",
+        "electron-icon-builder": "^2.0.0",
         "electron-log": "^4.3.5",
         "from-now": "^1.0.2",
         "mkdirp": "^1.0.4",
@@ -70,5 +74,6 @@
         "electron-updater": "^4.3.9",
         "electron-window-state": "^5.0.3",
         "nuxt": "^2.15.3"
-    }
+    },
+    "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
 }
