@@ -3,7 +3,8 @@
 <p align="center">
   <img width="150" height="150" src="src/renderer/assets/icons/icon-256.png">
 </p>
-<h1 align="center">Welcome to LayoutKit!</h1>
+<h1 align="center">THIS IS JUST X86/32BIT, GO TO THE ORIGINAL FOR 64BIT!
+<h2 align="center">Welcome to LayoutKit!</h2>
 <p align="center">
 LayoutKit is a tool that makes it easier to create Nintendo Switch layouts.
 </p>
